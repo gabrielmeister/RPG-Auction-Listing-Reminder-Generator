@@ -1,10 +1,10 @@
 # Google Calendar link generator
 
-Simple, Client-side "Add to Google Calendar" link generator web app.
+Simple, Client-side "Add to Google Calendar" link generator web app. Modified by Gabe Meister for RPG Auctions.
 
 ## Use
 
-You can use [this app on the hosted on github](http://decomaan.github.io/google-calendar-link-generator/).  
+You can use [this app on the hosted on github](https://gabrielmeister.github.io/RPG-Auction-Listing-Reminder-Generator/).  
 
 Or install locally and use.
 
