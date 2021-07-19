@@ -13,7 +13,7 @@ Or install locally and use.
 You should have [node.js](http://nodejs.org), [npm](https://www.npmjs.com/) and [bower](http://bower.io/) installed. You can install with bower: 
 
 ```bash
-$ bower install https://github.com/decomaan/google-calendar-link-generator
+$ bower install https://github.com/gabrielmeister/RPG-Auction-Listing-Reminder-Generator
 ```
 
 ## License
