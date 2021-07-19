@@ -3,7 +3,7 @@
     "description": "RPG Auctions Reminder Link Generator",
     "version": "0.0.1",
     "private": true,
-    "repository": "https://github.com/gabrielmeister/RPG-Auction-Listing-Reminder-Generator",
+    "repository": "https://github.com/HopeUA/tools-calendar",
     "license": "MIT",
 
     "devDependencies": {
