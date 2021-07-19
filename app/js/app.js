@@ -11,7 +11,7 @@
                 text:    title,
                 details: desc,
                 location: locat,
-                dates:   start + '/' + end
+                dates:   start + '/' + start
             });
 
             return uri.toString();

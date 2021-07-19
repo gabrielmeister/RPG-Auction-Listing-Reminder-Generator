@@ -2,7 +2,7 @@
 <html ng-app="calendar">
 <head>
     <meta charset="utf-8">
-    <title>Google Calendar event link generator</title>
+    <title>RPG Auctions Reminder Link Generator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
         document.write('<base href="' + document.location + '" />');
@@ -17,56 +17,28 @@
 <div class="container" ng-controller="EventController">
     <div class="row">
         <div class="col-md-5 col-lg-4">
-            <h1>Event URL generator</h1>
-            <h2>"add to Google Calendar"</h2>
-        </div>
-        <div class="col-md-5 col-lg-4" ng-show="url">
-            <h3>Event Link</h3>
-            <h4>URL</h4>
-            <div>
-				<textarea class="form-control" onclick="this.select();" readonly>{{url}}</textarea>
-            </div>
-            <h4>HTML link</h4>
-            <div>
-				<textarea class="form-control" onclick="this.select();" readonly><a href="{{url}}">add {{title}} to Google calendar</a></textarea>
-            </div>
-            <h4>Markdown link</h4>
-            <div>
-				<textarea class="form-control" onclick="this.select();" readonly>[add {{title}} to Google calendar]({{url}})</textarea>
-            </div>
+            <h1>RPG Auctions Reminder Link Generator</h1>
+            <h2>Use this to enable bidders to add a reminder link to their Google Calendar!</h2>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-5 col-lg-4">
             <form novalidate ng-submit="getUrl()">
-                <h3>Event Info</h3>
+                <h3>Auction Info</h3>
                 <div class="form-group">
-                    <label for="eventTitle">Title:</label>
+                    <label for="eventTitle">Item:</label>
                     <input ng-model="title" type="text" id="eventTitle" name="title" class="form-control" required />
                 </div>
                 <div class="form-group">
-                    <label for="eventDesc">Description:</label>
-                    <textarea ng-model="desc" id="eventDesc" name="desc" class="form-control" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="eventDesc">Location:</label>
+                    <label for="eventDesc">Facebook URL (Link):</label>
                     <textarea ng-model="locat" id="eventLocat" name="locat" class="form-control" required></textarea>
                 </div>
-                <h3>Date and Time</h3>
+                <h3>Auction End Date and Time</h3>
                 <div class="form-group">
-                    <label for="eventDateStart">Start:</label>
+                    <label for="eventDateStart">Auction Ends:</label>
                     <div class="input-group date" id="dateStartContainer" datetime ng-model="start">
                         <input type="text" class="form-control" id="eventDateStart" name="start" readonly/>
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="eventDateEnd">End:</label>
-                    <div class="input-group date" id="dateEndContainer" datetime ng-model="end">
-                        <input type="text" class="form-control" id="eventDateEnd" name="end" readonly/>
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-calendar"></span>
                         </span>
