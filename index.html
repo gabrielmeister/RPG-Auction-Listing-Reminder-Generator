@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="calendar">
+<head>
+    <meta charset="utf-8">
+    <title>RPG Auctions Reminder Link Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        document.write('<base href="' + document.location + '" />');
+    </script>
+
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container" ng-controller="EventController">
+    <div class="row">
+        <div class="col-md-5 col-lg-4">
+            <h1>RPG Auctions Reminder Link Generator</h1>
+            <h2>Use this to enable bidders to add a reminder link to their Google Calendar!</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5 col-lg-4">
+            <form novalidate ng-submit="getUrl()">
+                <h3>Auction Info</h3>
+                <div class="form-group">
+                    <label for="eventTitle">Item:</label>
+                    <input ng-model="title" type="text" id="eventTitle" name="title" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label for="eventDesc">Facebook URL (Link):</label>
+                    <textarea ng-model="locat" id="eventLocat" name="locat" class="form-control" required></textarea>
+                </div>
+                <h3>Auction End Date and Time</h3>
+                <div class="form-group">
+                    <label for="eventDateStart">Auction Ends:</label>
+                    <div class="input-group date" id="dateStartContainer" datetime ng-model="start">
+                        <input type="text" class="form-control" id="eventDateStart" name="start" readonly/>
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <input type="submit" value="Generate" class="btn btn-primary"/>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/moment/min/moment.min.js"></script>
+<script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="bower_components/URIjs/src/URI.min.js"></script>
+
+<script src="js/app.js"></script>
+</body>
+</html>
